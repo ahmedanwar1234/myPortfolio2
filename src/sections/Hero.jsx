@@ -94,17 +94,7 @@ const Hero = () => {
         className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
         >
-        <Canvas camera={{ position: [0, 1, 3] }}>
-          <Suspense fallback={<Loader />}>
-            <Float>
-              <Astronaut
-                scale={isMobile && 0.23}
-                position={isMobile && [0, -1.5, 0]}
-                />
-            </Float>
-            <Rig />
-          </Suspense>
-        </Canvas>
+       
       </figure>
        {/* Normal grenade before boom */}
       {!hideAll && (
@@ -160,7 +150,7 @@ const Hero = () => {
         className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
         >
-        <Canvas camera={{ position: [0, 1, 3] }}>
+         <Canvas camera={{ position: [0, 1, 3] }}>
           <Suspense fallback={<Loader />}>
             <Float>
               <Astronaut
