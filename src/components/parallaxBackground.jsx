@@ -13,7 +13,7 @@ const ParallaxBackground = () => {
       <div className="relative h-screen overflow-y-hidden">
         {/* Background Sky */}
         <div
-          className="absolute inset-0 w-full h-screen -z-50"
+          className="absolute inset-0 w-full h-screen -z-40"
           style={{
             backgroundImage: "url(/assets/sky.jpg)",
             backgroundPosition: "bottom",

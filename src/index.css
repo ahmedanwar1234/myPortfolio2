@@ -83,7 +83,9 @@ body {
 .nav-ul {
   @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .nav-li {
   @apply text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
 }

@@ -8,7 +8,7 @@ const Alert = ({ type, text }) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed z-50 flex items-center justify-center bottom-5 right-5"
+        className="fixed z-40 flex items-center justify-center bottom-5 right-5"
         initial="hidden"
         animate="visible"
         exit="exit"

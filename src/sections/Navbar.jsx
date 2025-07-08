@@ -1,73 +1,80 @@
-import { useState } from "react";
-import { motion } from "motion/react";
-function Navigation() {
+'use client'
+import React, { useRef } from 'react'
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';    
+
+import {
+  AiFillHome,
+  AiOutlineUser,
+  AiOutlineMail,
+  AiFillGithub,
+} from 'react-icons/ai';
+import { FaCode, FaLinkedinIn } from 'react-icons/fa';
+
+const Header = () => {
+  const containerRef = useRef();
+
+  useGSAP(() => {
+    // Add GSAP logic here if needed
+  }, []);
+
+  const iconStyle = `after:font-bold 
+    relative hover:scale-110 duration-300 
+    hover:rounded-full hover:p-2 
+    hover:bg-gray-400/30 
+    bg-[rgba(0,0,0,0.1)] font-light 
+    cursor-pointer text-[10px]
+    after:absolute after:bottom-[-100%] after:left-[10%]`;
+
   return (
-    <ul className="nav-ul">
-      <li className="nav-li">
-        <a className="nav-link" href="#home">
-          Home
-        </a>
-      </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#about">
-          About
-        </a>
-      </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#work">
-          Work
-        </a>
-      </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#contact">
-          Contact
-        </a>
-      </li>
-    </ul>
-  );
-}
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
-      <div className="mx-auto c-space max-w-7xl">
-        <div className="flex items-center justify-between py-2 sm:py-0">
-          <a
-            href="/"
-            className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
-          >
-            Ali
-          </a>
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
-          >
-            <img
-              src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
-              className="w-6 h-6"
-              alt="toggle"
-            />
-          </button>
-          <nav className="hidden sm:flex">
-            <Navigation />
-          </nav>
+    <div className="z-50 h-[50px] mt-8">
+      <div
+        ref={containerRef}
+        className="fixed lg:left-[50%] -translate-x-1/2 bg-black items-center 
+        border-[1px] border-gray-500 shadow-[1px_1px_20px_] shadow-gray-500 
+        rounded-3xl py-4 lg:hover:py-6 lg:hover:px-8 transition-all duration-300 
+        px-6 flex flex-row gap-6 lg:gap-7 "
+      >
+        <a href="#home">
+
+        <div className={`${iconStyle} hover:after:content-['Home']`}>
+          <AiFillHome size={21} color="#f8f8f8" />
         </div>
+        </a>
+
+<a href="#about">
+
+        <div className={`${iconStyle} hover:after:content-['About']`}>
+          <AiOutlineUser size={21} color="#f8f8f8" />
+        </div>
+</a>
+
+<a href="#projects">
+
+        <div className={`${iconStyle} hover:after:content-['Projects']`}>
+          <FaCode size={21} color="#f8f8f8" />
+        </div>
+</a>
+<a   href="#contact">
+
+        <div className={`${iconStyle} hover:after:content-['Contact']`}>
+          <AiOutlineMail size={21} color="#f8f8f8" />
+        </div>
+</a>
+<a href="https://www.linkedin.com/in/ahmed-anwar-%20%20%20%20%2004173725b">
+ <div className={`${iconStyle} hover:after:content-['LinkedIn']`}>
+          <FaLinkedinIn size={21} color="#f8f8f8" />
+        </div></a>
+       
+<a href="https://github.com/ahmedanwar1234">
+        <div className={`${iconStyle} hover:after:content-['Github']`}>
+          <AiFillGithub size={21} color="#f8f8f8" />
+        </div>
+</a>
+
       </div>
-      {isOpen && (
-        <motion.div
-          className="block overflow-hidden text-center sm:hidden"
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          style={{ maxHeight: "100vh" }}
-          transition={{ duration: 1 }}
-        >
-          <nav className="pb-5">
-            <Navigation />
-          </nav>
-        </motion.div>
-      )}
     </div>
   );
 };
 
-export default Navbar;
+export default Header;
