@@ -89,7 +89,6 @@ const Hero = () => {
   <div className="relative w-full h-full flex items-start justify-center md:items-start md:justify-start c-space">
 
  <HeroText />
-      <ParallaxBackground />
       <figure
         className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
@@ -145,22 +144,11 @@ const Hero = () => {
 
     <section id="home" className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space">
  <HeroText />
-      <ParallaxBackground />
       <figure
         className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
         >
-         <Canvas camera={{ position: [0, 1, 3] }}>
-          <Suspense fallback={<Loader />}>
-            <Float>
-              <Astronaut
-                scale={isMobile && 0.23}
-                position={isMobile && [0, -1.5, 0]}
-                />
-            </Float>
-            <Rig />
-          </Suspense>
-        </Canvas>
+        
       </figure>
        {/* Normal grenade before boom */}
       {!hideAll && (
