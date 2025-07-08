@@ -24,6 +24,8 @@ const Hero = () => {
     const [hidden, setHidden] = useState(false);
     const isMobile = useMediaQuery({ maxWidth: 853 });
     const [hideAll, setHideAll] = useState(false);
+
+    const width = window.innerWidth;
     useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
@@ -81,22 +83,24 @@ const Hero = () => {
 
     return () => ctx.revert();
   }, []);
-  return (
-<section id="home" className="relative w-screen min-h-screen overflow-hidden">
+  return (<>
+    {width < 500 ?(<>
+   <section id="home" className="relative w-full min-h-screen overflow-hidden">
   <div className="relative w-full h-full flex items-start justify-center md:items-start md:justify-start c-space">
-      <HeroText />
+
+ <HeroText />
       <ParallaxBackground />
       <figure
         className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
-      >
+        >
         <Canvas camera={{ position: [0, 1, 3] }}>
           <Suspense fallback={<Loader />}>
             <Float>
               <Astronaut
                 scale={isMobile && 0.23}
                 position={isMobile && [0, -1.5, 0]}
-              />
+                />
             </Float>
             <Rig />
           </Suspense>
@@ -105,10 +109,10 @@ const Hero = () => {
        {/* Normal grenade before boom */}
       {!hideAll && (
         <img
-          ref={grenadeRef}
-          className="fixed bottom-6  left-[50%] -translate-x-1/2 z-40 md:w-[20%] w-[60%]"
-          src="/pngwing.com.png"
-          alt="grenade"
+        ref={grenadeRef}
+        className="fixed bottom-6  left-[50%] -translate-x-1/2 z-40 md:w-[20%] w-[60%]"
+        src="/pngwing.com.png"
+        alt="grenade"
         />
       )}
 
@@ -120,13 +124,13 @@ const Hero = () => {
             className="fixed lg:-bottom-[950px] -bottom-[500px] left-[60%] z-40 md:w-[20%] w-[60%] rotate-180"
             src="/pngwing.com.png"
             alt="body"
-          />
+            />
           <img
             ref={pinRef}
             className="fixed -bottom-[500px] left-[20%] z-40 md:w-[10%] w-[30%]"
             src="/pin.png"
             alt="pin"
-          />
+            />
         </>
       )}
 
@@ -145,9 +149,75 @@ const Hero = () => {
       >
         <img src="/pngwing.com(2).png" alt="flash" />
       </div>} 
-  </div>
-</section>
+</div>
+    </section>
+</>):(<>
 
+    <section id="home" className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space">
+ <HeroText />
+      <ParallaxBackground />
+      <figure
+        className="absolute inset-0"
+        style={{ width: "100vw", height: "100vh" }}
+        >
+        <Canvas camera={{ position: [0, 1, 3] }}>
+          <Suspense fallback={<Loader />}>
+            <Float>
+              <Astronaut
+                scale={isMobile && 0.23}
+                position={isMobile && [0, -1.5, 0]}
+                />
+            </Float>
+            <Rig />
+          </Suspense>
+        </Canvas>
+      </figure>
+       {/* Normal grenade before boom */}
+      {!hideAll && (
+        <img
+        ref={grenadeRef}
+        className="fixed bottom-6  left-[50%] -translate-x-1/2 z-40 md:w-[20%] w-[60%]"
+        src="/pngwing.com.png"
+        alt="grenade"
+        />
+      )}
+
+      {/* Boom parts */}
+      {!hideAll && (
+        <>
+          <img
+            ref={bodyRef}
+            className="fixed lg:-bottom-[950px] -bottom-[500px] left-[60%] z-40 md:w-[20%] w-[60%] rotate-180"
+            src="/pngwing.com.png"
+            alt="body"
+            />
+          <img
+            ref={pinRef}
+            className="fixed -bottom-[500px] left-[20%] z-40 md:w-[10%] w-[30%]"
+            src="/pin.png"
+            alt="pin"
+            />
+        </>
+      )}
+
+      {/* Countdown */}
+      <div className="fixed inset-0 flex justify-center items-center z-50 bg-transparent pointer-events-none">
+        <h1 className="counter text-[200px] md:text-[500px] opacity-0 font-bold text-white transition-all duration-500">
+          {count}
+        </h1>
+      </div>
+
+      {/* Flash */}
+     {!hidden && <div
+        ref={flashRef}
+        id="flash"
+        className="fixed top-0 left-0 w-full h-full bg-white opacity-0 z-50 pointer-events-none flex justify-center items-center"
+      >
+        <img src="/pngwing.com(2).png" alt="flash" />
+      </div>} 
+    </section>
+</>)}
+     </>
   );
 };
 
