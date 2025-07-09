@@ -2,6 +2,7 @@ import { useRef } from "react";
 import Card from "../components/Card";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/Frameworks.jsx";
+import MiniGlobe from "../components/Globe.jsx";
 
 
 const About = () => {
@@ -36,7 +37,7 @@ const About = () => {
             </p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
-        
+        <MiniGlobe/>
           </figure>
         </div>
         {/* Grid 4 */}

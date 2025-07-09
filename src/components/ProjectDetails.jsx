@@ -10,9 +10,9 @@ const ProjectDetails = ({
   closeModal,
 }) => {
   return (
-    <div className="fixed z-50 inset-0 flex items-center justify-center w-full h-full backdrop-blur-sm px-4 sm:px-0 overflow-y-auto">
+    <div className="fixed  z-50 inset-0 flex items-center justify-center w-full h-full backdrop-blur-sm px-4 sm:px-0 overflow-y-auto">
       <motion.div
-        className="relative w-full max-w-2xl border shadow-sm rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10 overflow-hidden"
+        className=" max-sm: mt-52 relative w-full max-w-2xl border shadow-sm rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10 overflow-hidden"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
       >
