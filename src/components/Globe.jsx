@@ -21,7 +21,7 @@ const MiniGlobe = () => {
     >
       <Globe
         ref={globeRef}
-globeImageUrl="//unpkg.com/three-globe/example/img/earth-dark.jpg"        
+globeImageUrl="/assets/earthh.jpg"        
 backgroundColor="rgba(0,0,0,0)"
         width={300}
         height={300}
