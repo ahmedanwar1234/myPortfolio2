@@ -7,8 +7,10 @@ const HeroText = () => {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
   };
+
+
   return (
-    <div className="z-10 mt-30  text-center md:mt-40 md:text-left rounded-3xl bg-clip-text">
+    <div className="z-10 text-center md:text-left rounded-3xl bg-clip-text">
       {/* Desktop View */}
       <div className="flex-col hidden md:flex c-space">
         <motion.h1
@@ -18,7 +20,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi I'm Ali
+          Hi I'm Ahmed Anwar
         </motion.h1>
         <div className="flex flex-col items-start">
           <motion.p
@@ -61,7 +63,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi,I'm Ali
+          Hi,I'm Ahmed
         </motion.p>
         <div>
           <motion.p

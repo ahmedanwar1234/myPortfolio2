@@ -7,6 +7,7 @@ import Experiences from "./sections/Experiences";
 import Testimonial from "./sections/Testimonial";
 import Contact from "./sections/Contact";
 import Footer from './sections/Footer';
+import ParallaxBackground from "./components/parallaxBackground";
 
 const App = () => {
   return (
@@ -15,7 +16,11 @@ const App = () => {
 
       <Navbar />
       </div>
+      <div className="  flex items-center ">
+              <ParallaxBackground />
+
       <Hero />
+      </div>
       <About />
       <Projects />
       <Experiences />
