@@ -118,6 +118,22 @@ const Hero = () => {
         <div ref={shadowRef} className='absolute -top-2 -left-20 w-3 h-14 bg-[rgba(255,255,255,0.7)] rotate-z-[30deg] shadow-[0px_0px_10px] shadow-gray-400 rounded-4xl'></div>
       </div>
  <HeroText />
+ <figure
+        className="absolute inset-0"
+        style={{ width: "100vw", height: "100vh" }}
+      >
+        <Canvas className="-z-1" camera={{ position: [0, 1, 3] }}>
+          <Suspense fallback={<Loader />}>
+            <Float>
+              <Astronaut
+                scale={isMobile && 0.23}
+                position={isMobile && [0, -1.5, 0]}
+              />
+            </Float>
+            <Rig />
+          </Suspense>
+        </Canvas>
+        </figure>
   <div className='flex max-sm:flex-col  mt-20 items-center gap-6 '>
    <a href="#contact">  <button
     onMouseEnter={onHover}

@@ -2,8 +2,6 @@ import { useRef } from "react";
 import Card from "../components/Card";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/Frameworks.jsx";
-import React, { lazy, Suspense } from "react";
-const LazyGlobe = lazy(() => import("../components/Globe"));
 
 
 const About = () => {
@@ -38,9 +36,7 @@ const About = () => {
             </p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
-            <Suspense fallback={<p style={{ color: 'white' }}>Loading globe...</p>}>
-  <LazyGlobe className="top-28" />
-</Suspense>
+        
           </figure>
         </div>
         {/* Grid 4 */}
