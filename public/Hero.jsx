@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import { FaArrowDown } from "react-icons/fa6"
-
+import { FlipText } from "../components/magicui/flip-text";
 const Hero = () => {
   const heroRef = useRef()
   const boomRef = useRef()
@@ -104,7 +104,7 @@ setHidden(!hidden)
         Crafting Beautiful & <br /> Functional Web Experiences
       </h1>
       <p className='text-center text-[13px] lg:text-[20px] w-[75%] font-normal hover-text'>
-        Hey, I'm Ahmed Anwar, a Full Stack Developer passionate about building performant, user-friendly, and scalable applications.
+        Hey, I'm <FlipText>Ahmed Anwar</FlipText>, a Full Stack Developer passionate about building performant, user-friendly, and scalable applications.
       </p>
 
       <div className='flex items-center gap-6'>
@@ -113,7 +113,7 @@ setHidden(!hidden)
           className='hover:scale-105 duration-300 bg-transparent border-[0.5px] border-gray-600 px-6 py-1 rounded-2xl flex items-center gap-4'
         >
           <img ref={bottombye} className='w-10' src="/waving-hand.png" alt="wave" />
-          <h2>Let's Connect</h2>
+          <h2> Let's Connect</h2>
         </button>
 
         <button

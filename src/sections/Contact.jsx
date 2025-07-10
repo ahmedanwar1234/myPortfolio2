@@ -2,6 +2,8 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
+import { Meteors } from "../components/magicui/meteors";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -53,6 +55,7 @@ const Contact = () => {
   };
   return (
     <section id="contact" className="relative flex items-center c-space section-spacing">
+    <Meteors/>
       <Particles
         className="absolute inset-0 -z-40"
         quantity={100}
@@ -72,7 +75,7 @@ const Contact = () => {
         <form className="w-full" onSubmit={handleSubmit}>
           <div className="mb-5">
             <label htmlFor="name" className="feild-label">
-              Full Name
+              Full Name 
             </label>
             <input
               id="name"

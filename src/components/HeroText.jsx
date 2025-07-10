@@ -1,5 +1,7 @@
 import { FlipWords } from "./FlipWords";
 import { motion } from "motion/react";
+import { SparklesText } from "../components/magicui/sparkles-text";
+import { MorphingText } from "../components/magicui/morphing-text";
 
 const HeroText = () => {
   const words = ["Secure", "Modern", "Scalable"];
@@ -20,7 +22,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi I'm Ahmed Anwar
+          Hi I'm <SparklesText className={" text-4xl  inline"}>Ahmed Anwar</SparklesText>
         </motion.h1>
         <div className="flex flex-col items-start">
           <motion.p
@@ -38,10 +40,9 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.5 }}
           >
-            <FlipWords
-              words={words}
-              className="font-black text-white text-8xl"
-            />
+            
+                                    <MorphingText texts={["Hello", "World"]} />
+
           </motion.div>
           <motion.p
             className="text-4xl font-medium text-neutral-300"
@@ -50,6 +51,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
+            
             Web Solutions
           </motion.p>
         </div>
@@ -63,7 +65,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi,I'm Ahmed
+          Hi,I'm <SparklesText className={" text-4xl  inline"}>Ahmed </SparklesText>
         </motion.p>
         <div>
           <motion.p

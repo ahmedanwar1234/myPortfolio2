@@ -1,23 +1,24 @@
 export const myProjects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Airbnb Clone",
     description:
-      "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
+      "A fully responsive Airbnb-style rental application that allows users to list, book, and manage vacation properties. Built using Next.js 14, Prisma, and Tailwind CSS, with advanced authentication, location features, and modern UI components.",
     subDescription: [
-      "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
-      "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
-      "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
-      "Added payment systems, localization, and product filtering for functionality improvements.",
+      "Authentication with Clerk and NextAuth, including secure sessions, JWT, and role-based access",
+      "Users can list properties with detailed forms (images, amenities, pricing, availability)",
+      "Map-based search and geo-filtering using Leaflet, React-Leaflet, and world-countries",
+      "Fully styled with TailwindCSS, with theme switching (light/dark) using next-themes",
+      "State managed with Zustand, ensuring lightweight and scalable client-side logic"
     ],
-    href: "",
+    href: "https://github.com/ahmedanwar1234/arbinb",
     logo: "",
     image: "/assets/projects/accessories.jpg",
     tags: [
       {
         id: 1,
-        name: "C#",
-        path: "/assets/logos/csharp.svg",
+        name: "Next js",
+        path: "/assets/logos/N.svg",
       },
       {
         id: 2,
