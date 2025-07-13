@@ -13,99 +13,90 @@ export const myProjects = [
     ],
     href: "https://github.com/ahmedanwar1234/arbinb",
     logo: "",
-    image: "/assets/projects/accessories.jpg",
+    image: "/assets/projects/airbnb.jpeg",
     tags: [
       {
         id: 1,
         name: "Next js",
         path: "/assets/logos/N.svg",
-      },
+      },  
       {
         id: 2,
-        name: ".Net",
-        path: "/assets/logos/dotnet.svg",
-      },
-      {
-        id: 3,
-        name: "Ef Core",
-        path: "/assets/logos/efcore.png",
-      },
-      {
-        id: 4,
         name: "TailwindCSS",
         path: "/assets/logos/tailwindcss.svg",
+      }, {
+        id: 3,
+        name: "Mongodb",
+        path: "/assets/logos/mongodb.svg",
       },
     ],
   },
   {
     id: 2,
-    title: "Authentication & Authorization System",
-    description:
-      "A secure authentication and authorization system using Auth0 for seamless user management.",
-    subDescription: [
-      "Integrated Auth0 for authentication, supporting OAuth, JWT, and multi-factor authentication.",
-      "Implemented role-based access control (RBAC) for fine-grained user permissions.",
-      "Developed a React-based frontend with Tailwind CSS for a sleek user experience.",
-      "Connected to a secure SQLite database for user data storage.",
-    ],
-    href: "",
+  title: "Full-Stack Blog App",
+  description:
+    "A complete blogging platform featuring rich-text editing, image uploads, and secure authentication using JWT.",
+  subDescription: [
+    "Built a full-featured blog editor with Tiptap, supporting code blocks, images, color formatting, and HTML parsing.",
+    "Developed a RESTful API using Express.js and MongoDB for post, user, and media management.",
+    "Implemented secure user authentication with JWT and hashed passwords using bcrypt.",
+    "Integrated image upload functionality with Multer and React Easy Crop for enhanced UX.",
+    "Used Redux Toolkit and React Query for efficient state and data handling.",
+    "Styled the frontend with Material UI, Tailwind CSS, and styled-components for a polished UI.",
+    "Set up protected routes, toast notifications, and form validation for a complete user experience.",
+    "Tested frontend components using React Testing Library and managed logs via Morgan on the backend.",
+  ],
+    href: "https://vite-react-rho-pied.vercel.app/",
     logo: "",
-    image: "/assets/projects/auth-system.jpg",
+    image: "/assets/projects/blogApp.jpeg",
     tags: [
+     
       {
         id: 1,
-        name: "Auth0",
-        path: "/assets/logos/auth0.svg",
-      },
-      {
-        id: 2,
         name: "React",
         path: "/assets/logos/react.svg",
       },
       {
-        id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
+        id: 2,
+        name: "express",
+        path: "/assets/logos/express.svg",
       },
       {
-        id: 4,
+        id: 3,
         name: "TailwindCSS",
         path: "/assets/logos/tailwindcss.svg",
+      }, {
+        id: 4,
+        name: "Mongodb",
+        path: "/assets/logos/mongodb.svg",
       },
     ],
   },
   {
-    id: 3,
-    title: "Blazor Web App",
-    description:
-      "A modern, interactive web application built with Blazor WebAssembly and .NET Core.",
-    subDescription: [
-      "Developed a fully interactive Single Page Application (SPA) using Blazor WebAssembly.",
-      "Implemented API interactions using .NET Core for a robust backend.",
-      "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
-      "Integrated SQLite for efficient client-side database storage.",
-    ],
-    href: "",
+   "id": 3,
+  "title": "Fitness Trainer Website",
+  "description": "A modern and responsive website for a personal trainer, built with React and Vite, featuring clean UI and multiple interactive pages.",
+  "subDescription": [
+    "Built using Vite and React for fast performance and efficient development.",
+    "Created multiple static and dynamic pages such as Home, About, Services, Contact, and Plans.",
+    "Implemented routing and navigation using React Router v6.",
+    "Managed shared data using Redux Toolkit (e.g., user sessions, form state, or plan details).",
+    "Integrated Axios for contact forms or dynamic data fetching from backend.",
+    "Styled with Tailwind CSS for a responsive, clean, and mobile-friendly layout.",
+    "Enhanced user experience using React Icons and smooth transitions."
+  ],
+    href: "https://vite-react-rho-pied.vercel.app/",
     logo: "",
-    image: "/assets/projects/blazor-app.jpg",
+    image: "/assets/projects/fitnessGym.png",
     tags: [
       {
         id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
+        name: "React",
+        path: "/assets/logos/react.svg",
       },
+      
       {
         id: 2,
-        name: ".NET Core",
-        path: "/assets/logos/dotnetcore.svg",
-      },
-      {
-        id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
-      },
-      {
-        id: 4,
         name: "TailwindCSS",
         path: "/assets/logos/tailwindcss.svg",
       },
@@ -113,110 +104,91 @@ export const myProjects = [
   },
   {
     id: 4,
-    title: "C++ Game Engine",
-    description:
-      "A lightweight C++ game engine designed for 2D and 3D game development.",
-    subDescription: [
-      "Built a powerful rendering engine using OpenGL and C++.",
-      "Developed a physics engine with collision detection and particle effects.",
-      "Implemented a scripting system for easy game customization.",
-      "Optimized performance with multi-threading and efficient memory management.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/game-engine.jpg",
+    "title": "Organic Food Website",
+  description: "A modern, eco-conscious landing page for organic food products, built with SvelteKit and Tailwind CSS.",
+  "subDescription": [
+    "Developed using SvelteKit for fast performance, optimized routing, and modern frontend architecture.",
+    "Tailwind CSS used for a clean, responsive design tailored to natural and organic brand aesthetics.",
+    "Custom fonts and visuals powered by @fontsource and confetti effects via @neoconfetti/svelte for playful interactions.",
+    "Built with Vite for lightning-fast dev experience and build optimization.",
+    "PostCSS and Autoprefixer used for cross-browser styling and production readiness.",
+    "Configured for deployment with Vercel using @sveltejs/adapter-vercel.",
+    "Ideal for promoting organic brands, eco-friendly products, and sustainable food campaigns."
+  ],
+    href: "https://organic2-eight.vercel.app/news/6",
+    logo: "/organic.png",
+    image: "/organic.png",
     tags: [
       {
         id: 1,
-        name: "C++",
-        path: "/assets/logos/cplusplus.svg",
-      },
-      {
-        id: 2,
-        name: "C#",
-        path: "/assets/logos/csharp.svg",
-      },
-      {
-        id: 3,
-        name: "Git",
-        path: "/assets/logos/git.svg",
-      },
-      {
-        id: 4,
-        name: "Microsoft",
-        path: "/assets/logos/microsoft.svg",
-      },
+        name: "Svelte js",
+        path: "/assets/logos/svelte-icon.svg",
+      }
     ],
   },
   {
     id: 5,
-    title: "WordPress Custom Theme",
-    description:
-      "A fully customizable WordPress theme optimized for performance and SEO.",
-    subDescription: [
-      "Developed a responsive WordPress theme using HTML5, CSS3, and JavaScript.",
-      "Integrated Tailwind CSS for modern styling and UI enhancements.",
-      "Optimized SEO and page speed using Vite.js for fast builds.",
-      "Implemented custom widgets and plugin compatibility for extended functionality.",
-    ],
-    href: "",
+    title: "Ecommerce Shop Starter",
+   "description": "A fast, responsive e-commerce frontend built with React and Tailwind CSS.",
+  "subDescription": [
+    "Client-side routing using React Router v6 for smooth navigation between pages.",
+    "Responsive product listing grid showing product images, names, and prices.",
+    "Product details page for individual item views (if implemented).",
+    "Shopping cart UI with add-to-cart functionality (if implemented).",
+    "Tailwind CSS utility classes for clean, responsive styling.",
+    "Static deployment setup with gh-pages for easy hosting.",
+    "Performance optimizations with PostCSS and Autoprefixer.",
+    "Modern UI icons provided by React Icons."
+  ],
+  "tools": [
+    "React",
+    "React Router",
+    "Tailwind CSS",
+    "React Testing Library",
+    "Jest-DOM",
+    "PostCSS",
+    "Autoprefixer",
+    "React Icons",
+    "gh-pages"
+  ],
+    href: "https://ecommerce-shop-starter-seven.vercel.app/",
     logo: "",
-    image: "/assets/projects/wordpress-theme.jpg",
+    image: "/assets/projects/ecommerc.png",
     tags: [
       {
         id: 1,
-        name: "WordPress",
-        path: "/assets/logos/wordpress.svg",
+        name: "React",
+        path: "/assets/logos/react.svg",
       },
-      {
-        id: 2,
-        name: "HTML5",
-        path: "/assets/logos/html5.svg",
-      },
-      {
-        id: 3,
-        name: "CSS3",
-        path: "/assets/logos/css3.svg",
-      },
-      {
-        id: 4,
-        name: "Vite.js",
-        path: "/assets/logos/vitejs.svg",
-      },
+     
+   
     ],
   },
   {
     id: 6,
-    title: "Online Learning Platform",
-    description:
-      "A web application that allows users to enroll in courses, watch video lectures, and take quizzes.",
-    subDescription: [
-      "Built using Blazor WebAssembly for a seamless SPA experience.",
-      "Implemented video streaming with Azure Media Services.",
-      "Added a quiz system with dynamic question generation and real-time grading.",
-      "Integrated Stripe API for secure payment processing.",
-    ],
-    href: "",
+   "title": "Travel UI/UX Website",
+  "description": "A sleek and modern travel-themed website focused on user experience and visual design.",
+  "subDescription": [
+    "Designed with a clean, intuitive layout for showcasing travel destinations or agencies.",
+    "Built using React and Next.js 14 for optimized routing and performance.",
+    "Styled using Tailwind CSS to ensure responsiveness across devices.",
+    "Focus on modern UI components, hero sections, grids, and call-to-actions.",
+    "Ideal for presenting travel packages, blogs, or destination highlights.",
+    "Includes TypeScript setup for safer and scalable development.",
+    "Optimized with PostCSS and Autoprefixer for cross-browser styling."
+  ],
+    href: "https://travel-sage-seven.vercel.app/",
     logo: "",
-    image: "/assets/projects/elearning.jpg",
+    image: "/assets/projects/travel.png",
     tags: [
       {
         id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
+        name: "Next js",
+        path: "/assets/logos/N.svg",
       },
+ 
       {
         id: 2,
-        name: "Azure",
-        path: "/assets/logos/azure.svg",
-      },
-      {
-        id: 3,
-        name: "Stripe",
-        path: "/assets/logos/stripe.svg",
-      },
-      {
-        id: 4,
         name: "TailwindCSS",
         path: "/assets/logos/tailwindcss.svg",
       },
@@ -265,54 +237,4 @@ export const experiences = [
 "                    Created CI/CD pipelines for automated testing and deployment"
 ]},
   
-];
-export const reviews = [
-  {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://robohash.org/jack",
-  },
-  {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://robohash.org/jill",
-  },
-  {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://robohash.org/john",
-  },
-  {
-    name: "Alice",
-    username: "@alice",
-    body: "This is hands down the best thing I've experienced. Highly recommend!",
-    img: "https://robohash.org/alice",
-  },
-  {
-    name: "Bob",
-    username: "@bob",
-    body: "Incredible work! The attention to detail is phenomenal.",
-    img: "https://robohash.org/bob",
-  },
-  {
-    name: "Charlie",
-    username: "@charlie",
-    body: "This exceeded all my expectations. Absolutely stunning!",
-    img: "https://robohash.org/charlie",
-  },
-  {
-    name: "Dave",
-    username: "@dave",
-    body: "Simply breathtaking. The best decision I've made in a while.",
-    img: "https://robohash.org/dave",
-  },
-  {
-    name: "Eve",
-    username: "@eve",
-    body: "So glad I found this. It has changed the game for me.",
-    img: "https://robohash.org/eve",
-  },
 ];

@@ -1,15 +1,24 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import HeroText from "../components/HeroText";
 import { useMediaQuery } from "react-responsive";
 import { FaArrowDown } from "react-icons/fa";
-import { ScratchToReveal } from "../components/magicui/scratch-to-reveal";
 import gsap from "gsap";
 
 const Hero = () => {
   const bottombye = useRef();
   const resumeRef = useRef();
   const isMobile = useMediaQuery({ maxWidth: 853 });
+  const shadowRef = useRef()
 
+
+  useEffect(()=>{
+
+    gsap.to(shadowRef.current, {
+      repeat: -1,
+      x: 400,
+      duration: 2,
+    })
+  },[])
   const onHover = () => {
     gsap.fromTo(
       bottombye.current,
@@ -29,6 +38,8 @@ const Hero = () => {
       <div className="flex-col mt-20 relative w-full h-full flex items-center">
         <div className="mb-10 relative overflow-hidden lg:mt-[150px] mt-[50px] border-[0.5px] text-[11px] lg:text-[14px] rounded-2xl border-gray-400 px-3 py-2 hover-text">
           Actively Seeking Job Opportunities
+                  <div ref={shadowRef} className='absolute -top-2 -left-20 w-3 h-14 bg-[rgba(255,255,255,0.7)] rotate-z-[30deg] shadow-[0px_0px_10px] shadow-gray-400 rounded-4xl'></div>
+
         </div>
 
         <HeroText />
@@ -56,14 +67,7 @@ const Hero = () => {
             </button>
           </a>
         </div>
- <ScratchToReveal
-        width={100}
-        height={100}
-        minScratchPercentage={100} // ✅ مهم: رقم مش سترينج
-        className="rounded-xl mt-10  overflow-hidden shadow-lg"
-      >
-        <img src="/assets/logos/emoji.jpg" alt="" />
-      </ScratchToReveal>  
+
       </div>
       </section>
   );

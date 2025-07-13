@@ -13,7 +13,7 @@ const HeroText = () => {
 
   return (
     <div className="z-10 text-center md:text-left rounded-3xl bg-clip-text">
-      {/* Desktop View */}
+      {/* heDesktop View */}
       <div className="flex-col hidden md:flex c-space">
         <motion.h1
           className="text-4xl font-medium"
@@ -41,7 +41,7 @@ const HeroText = () => {
             transition={{ delay: 1.5 }}
           >
             
-                                    <MorphingText texts={["Hello", "World"]} />
+                                    <MorphingText texts={words} />
 
           </motion.div>
           <motion.p
