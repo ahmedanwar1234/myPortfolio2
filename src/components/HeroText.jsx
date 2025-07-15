@@ -2,6 +2,7 @@ import { FlipWords } from "./FlipWords";
 import { motion } from "motion/react";
 import { SparklesText } from "../components/magicui/sparkles-text";
 import { MorphingText } from "../components/magicui/morphing-text";
+import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision";
 
 const HeroText = () => {
   const words = ["Secure", "Modern", "Scalable"];
@@ -12,6 +13,9 @@ const HeroText = () => {
 
 
   return (
+    <>
+      <BackgroundBeamsWithCollision>
+
     <div className="z-10 text-center md:text-left rounded-3xl bg-clip-text">
       {/* heDesktop View */}
       <div className="flex-col hidden md:flex c-space">
@@ -100,6 +104,8 @@ const HeroText = () => {
         </div>
       </div>
     </div>
+      </BackgroundBeamsWithCollision>
+    </>
   );
 };
 
