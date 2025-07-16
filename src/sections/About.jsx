@@ -1,12 +1,9 @@
-import { useRef } from "react";
-import Card from "../components/Card";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/Frameworks.jsx";
 import Globe from "../components/Globe.jsx";
 
 
 const About = () => {
-  const grid2Container = useRef();
   return (
     <section className="c-space section-spacing" id="about">
       <h2 className="text-heading">About Me</h2>

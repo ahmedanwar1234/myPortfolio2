@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
@@ -11,7 +10,7 @@ import ParallaxBackground from "./components/parallaxBackground";
 const App = () => {
   return (
     <div className="container mx-auto max-w-7xl overflow-hidden">
-      <div className=" fixed z-50 -translate-x-[50%] left-[50%]">
+      <div className=" fixed  z-50 -translate-x-[50%] left-[50%]">
 
       <Navbar />
       </div>

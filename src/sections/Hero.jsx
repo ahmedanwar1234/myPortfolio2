@@ -1,13 +1,11 @@
 import { useEffect, useRef } from "react";
 import HeroText from "../components/HeroText";
-import { useMediaQuery } from "react-responsive";
 import { FaArrowDown } from "react-icons/fa";
 import gsap from "gsap";
 
 const Hero = () => {
   const bottombye = useRef();
   const resumeRef = useRef();
-  const isMobile = useMediaQuery({ maxWidth: 853 });
   const shadowRef = useRef()
 
 
